@@ -22,11 +22,11 @@ abstract class TariffAbstract implements TariffInterface
 
         if ($this->services) {
             foreach ($this->services as $service) {
-                $service->apply($this, $price);
+                $result += $service->apply($this, $price);
             }
         }
 
-        return $price;
+        return $price + $result;
     }
 
     public function addService(ServiceInterface $service): TariffInterface
