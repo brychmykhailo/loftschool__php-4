@@ -1,7 +1,7 @@
 <?php
 class ServiceDriver implements ServiceInterface
 {
-    protected $driverPrice = 100;
+    protected $driverPrice = 200;
 
     public function __construct(int $price) {
         $this->driverPrice = $price;
